@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import 'animate.css';
+import 'animate.css';a
 
 import App from './App';
 
