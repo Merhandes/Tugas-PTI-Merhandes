@@ -19,8 +19,8 @@ const Products = () => {
   return (
     <div className="container">
       <div className="row pt-5">
-        <h1 className="fw-bold">Selamat Datang di Handes Shop</h1>
-        <p>Catalog</p>
+        <h1 className="animate__animated animate__fadeInUp anime__delay-1s">Selamat Datang di Handes Shop</h1>
+        <p className="animate__animated anime_fadeInUp">Catalog</p>
         {products.map((produk) => {
           return (
             <div className="Card col-lg d-flex pt-3">
@@ -41,7 +41,7 @@ const Products = () => {
 
 function CardProduct(props) {
   return (
-    <Card className="Card" style={{ width: "18rem"}}>
+    <Card className="Card animate__animated animate__fadeInUp anime__delay-1s" style={{ width: "18rem"}}>
       <Card.Img
         variant="top"
         src={props.img}

@@ -2,7 +2,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const Navbar1 = () => {
   return (
-    <div>
+    <div className="animate__animated animate__fadeInDown anime__delay-1s">
     <Navbar bg="primary" variant="dark">
         <Container>
           <Navbar.Brand href="#" className="fw-bold">Handes Shop</Navbar.Brand>
