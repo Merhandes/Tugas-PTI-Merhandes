@@ -19,17 +19,16 @@ const Products = () => {
   return (
     <div className="container">
       <div className="row pt-5">
-        <h1 className="animate__animated animate__fadeInUp anime__delay-1s">Selamat Datang di Handes Shop</h1>
-        <p className="animate__animated anime_fadeInUp">Catalog</p>
+        <h1 className="fw-bold animate__animated animate__fadeInUp animate__delay-1s">Welcome To Handes Shop</h1>
+        <p className="animate__animated animate__fadeInUp animate__delay-1s">Catalog</p>
         {products.map((produk) => {
           return (
             <div className="Card col-lg d-flex pt-3">
               <CardProduct
                 name={produk.title}
                 img={produk.image}
-                death={produk.death_year}
-                description={produk.description}
-                ascension={produk.ascension_year}
+                price={produk.price}
+                category={produk.category}
               />
             </div>
           );
@@ -41,7 +40,7 @@ const Products = () => {
 
 function CardProduct(props) {
   return (
-    <Card className="Card animate__animated animate__fadeInUp anime__delay-1s" style={{ width: "18rem"}}>
+    <Card className="Card animate__animated animate__fadeInUp animate__delay-1s" style={{ width: "18rem"}}>
       <Card.Img
         variant="top"
         src={props.img}
@@ -50,8 +49,8 @@ function CardProduct(props) {
       />
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
-        <Card.Text>{props.description}</Card.Text>
-        <Button href={props.img}variant="primary">Lihat Gambar</Button>
+        <Card.Text>{props.category}<br></br>Price: {props.price}$</Card.Text>
+        <Button className="ml-auto" href={props.img}variant="primary">Beli</Button>
       </Card.Body>
     </Card>
   );
